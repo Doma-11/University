@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="673.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.algebra.controllers.EntryMenuMultiplayerController">
+   <children>
+      <ImageView fitHeight="506.0" fitWidth="739.0" layoutX="-1.0" opacity="0.78" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/images/wctrophy_qatarneboderi.jpg" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="340.0" layoutY="21.0" prefHeight="451.0" prefWidth="337.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="120.4" minHeight="10.0" prefHeight="105.20001831054688" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="87.59998168945313" minHeight="10.0" prefHeight="23.200027465820327" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="144.19997253417972" minHeight="10.0" prefHeight="89.60001831054689" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="123.99997558593748" minHeight="10.0" prefHeight="109.5999816894531" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label fx:id="lbPlayersNickname" graphicTextGap="5.0" text="Player1" textFill="#f8db00">
+               <font>
+                  <Font name="Georgia Bold Italic" size="36.0" />
+               </font>
+               <effect>
+                  <Lighting specularConstant="1.33" specularExponent="21.47" surfaceScale="7.1">
+                     
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </Label>
+            <Button fx:id="btnPlay" disable="true" mnemonicParsing="false" onAction="#btnPlay_onClick" prefHeight="37.0" prefWidth="144.0" style="-fx-background-color: #f8db00; -fx-background-radius: 32;" text="Play" GridPane.rowIndex="3" />
+            <Label alignment="CENTER" text="is playing against" textFill="#f8db00" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Book Antiqua Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbOpponentsNickname" graphicTextGap="5.0" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+               <effect>
+                  <Lighting specularConstant="1.33" specularExponent="21.47" surfaceScale="7.1">
+                     
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color blue="0.1764705926179886" green="0.1764705926179886" red="0.6745098233222961" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label fx:id="lbMessage" alignment="CENTER" text="Waiting for other player..." textFill="#56042c" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Book Antiqua Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

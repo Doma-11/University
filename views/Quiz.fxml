@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #56042C; -fx-background-radius: 32px;; -fx-border-radius: 32px;;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.algebra.controllers.QuizController">
+    <stylesheets>
+        <URL value="@/hr/algebra/style/quiz.css" />
+    </stylesheets>
+   <children>
+      <Label fx:id="lbQuestion" layoutX="32.0" layoutY="52.0" prefHeight="73.0" prefWidth="836.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="opt1" layoutX="182.0" layoutY="195.0" mnemonicParsing="false" onAction="#opt1Clicked" prefHeight="67.0" prefWidth="244.0" style="-fx-border-radius: 32px;; -fx-background-radius: 32px;; -fx-background-color: WHITE;" textFill="#56042c">
+         <font>
+            <Font name="MS Outlook" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="opt3" layoutX="182.0" layoutY="327.0" mnemonicParsing="false" onAction="#opt3Clicked" prefHeight="67.0" prefWidth="244.0" style="-fx-border-radius: 32px;; -fx-background-radius: 32px;; -fx-background-color: WHITE;" textFill="#56042c">
+         <font>
+            <Font name="MS Outlook" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="opt2" layoutX="496.0" layoutY="195.0" mnemonicParsing="false" onAction="#opt2Clicked" prefHeight="67.0" prefWidth="244.0" style="-fx-border-radius: 32px;; -fx-background-radius: 32px;; -fx-background-color: WHITE;" textFill="#56042c">
+         <font>
+            <Font name="MS Outlook" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="opt4" layoutX="496.0" layoutY="327.0" mnemonicParsing="false" onAction="#opt4Clicked" prefHeight="67.0" prefWidth="244.0" style="-fx-border-radius: 32px;; -fx-background-radius: 32px;; -fx-background-color: WHITE;" textFill="#56042c">
+         <font>
+            <Font name="MS Outlook" size="17.0" />
+         </font>
+      </Button>
+      <Label fx:id="lbCorrectAnswer" layoutX="136.0" layoutY="558.0" prefHeight="67.0" prefWidth="263.0" textFill="WHITE" />
+      <Label layoutX="23.0" layoutY="558.0" prefHeight="67.0" prefWidth="89.0" text="Correct answer:" textFill="WHITE" />
+   </children>
+</AnchorPane>

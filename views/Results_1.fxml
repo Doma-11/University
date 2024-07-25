@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="621.0" style="-fx-background-color: #56042C;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.algebra.controllers.ResultsController">
+   <children>
+      <Label layoutX="182.0" layoutY="19.0" prefHeight="35.0" prefWidth="228.0" text="             RESULTS:" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="35.0" layoutY="73.0" prefHeight="49.0" prefWidth="61.0" text="Player:" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="35.0" layoutY="143.0" prefHeight="49.0" prefWidth="61.0" text="Score:" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="216.0" prefHeight="49.0" prefWidth="145.0" text="Selected players:" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbMyNickname" alignment="CENTER" layoutX="166.0" layoutY="73.0" prefHeight="49.0" prefWidth="159.0" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbOpponentsNickname" alignment="CENTER" layoutX="396.0" layoutY="73.0" prefHeight="49.0" prefWidth="171.0" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbMyPoints" alignment="CENTER" layoutX="166.0" layoutY="143.0" prefHeight="49.0" prefWidth="171.0" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbOpponentPoints" alignment="CENTER" layoutX="398.0" layoutY="143.0" prefHeight="49.0" prefWidth="184.0" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <ScrollPane layoutX="176.0" layoutY="225.0" prefHeight="200.0" prefWidth="200.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <VBox fx:id="vbMyPlayers" layoutX="1.0" prefHeight="184.0" prefWidth="184.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <ScrollPane layoutX="396.0" layoutY="225.0" prefHeight="200.0" prefWidth="200.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <VBox fx:id="vbOpponentPlayers" layoutX="8.0" layoutY="8.0" prefHeight="184.0" prefWidth="184.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Button fx:id="btnMenu" layoutX="44.0" layoutY="364.0" mnemonicParsing="false" onAction="#btnMenu_OnAction" style="-fx-background-color: #ffffff; -fx-background-radius: 32px;" text="MENU" textFill="#56042c">
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="693.0" prefWidth="1029.0" style="-fx-background-color: #56042C; -fx-background-radius: 32px;; -fx-border-radius: 32px;;" stylesheets="@../style/main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.algebra.controllers.TeamController">
+   <children>
+      <ComboBox fx:id="cbGk" layoutX="5.0" layoutY="88.0" onAction="#comboBoxSelectAction" prefHeight="25.0" prefWidth="136.0" promptText="GOALKEEPER:" style="-fx-background-radius: 32px;" visibleRowCount="50" />
+      <Label layoutX="321.0" layoutY="14.0" prefHeight="45.0" prefWidth="270.0" text="2022 WORLD CUP GAME" textFill="#e1bd08">
+         <font>
+            <Font name="Bell MT Bold" size="20.0" />
+         </font></Label>
+      <ComboBox fx:id="cbDefender1" layoutX="5.0" layoutY="126.0" onAction="#comboBoxSelectAction" prefHeight="25.0" prefWidth="136.0" promptText="DEFENDER:" style="-fx-background-radius: 32px;;" visibleRowCount="100" />
+      <ComboBox fx:id="cbDefender3" layoutX="5.0" layoutY="198.0" onAction="#comboBoxSelectAction" prefHeight="25.0" prefWidth="136.0" promptText="DEFENDER:" style="-fx-background-radius: 32px;" visibleRowCount="100" />
+      <ComboBox fx:id="cbDefender2" layoutX="5.0" layoutY="162.0" onAction="#comboBoxSelectAction" prefHeight="25.0" prefWidth="136.0" promptText="DEFENDER:" style="-fx-background-radius: 32px;" visibleRowCount="100" />
+      <ComboBox fx:id="cbDefender4" layoutX="5.0" layoutY="233.0" onAction="#comboBoxSelectAction" prefHeight="25.0" prefWidth="136.0" promptText="DEFENDER:" style="-fx-background-radius: 32px;" visibleRowCount="100" />
+      <ComboBox fx:id="cbMidfielder2" layoutX="5.0" layoutY="307.0" onAction="#comboBoxSelectAction" prefHeight="25.0" prefWidth="136.0" promptText="MIDFIELDER:" style="-fx-background-radius: 32px;" visibleRowCount="100" />
+      <ComboBox fx:id="cbMidfielder3" layoutX="5.0" layoutY="338.0" onAction="#comboBoxSelectAction" prefHeight="25.0" prefWidth="136.0" promptText="MIDFIELDER:" style="-fx-background-radius: 32px;" visibleRowCount="100" />
+      <ComboBox fx:id="cbMidfielder1" layoutX="5.0" layoutY="271.0" onAction="#comboBoxSelectAction" prefHeight="25.0" prefWidth="136.0" promptText="MIDFIELDER:" style="-fx-background-radius: 32px;" visibleRowCount="100" />
+      <ComboBox fx:id="cbAttacker2" layoutX="5.0" layoutY="408.0" onAction="#comboBoxSelectAction" prefHeight="25.0" prefWidth="136.0" promptText="ATTACKER:" style="-fx-background-radius: 32px;" visibleRowCount="100" />
+      <ComboBox fx:id="cbAttacker1" layoutX="5.0" layoutY="371.0" onAction="#comboBoxSelectAction" prefHeight="25.0" prefWidth="136.0" promptText="ATTACKER:" style="-fx-background-radius: 32px;" visibleRowCount="100" />
+      <ComboBox fx:id="cbAttacker3" layoutX="5.0" layoutY="447.0" onAction="#comboBoxSelectAction" prefHeight="25.0" prefWidth="136.0" promptText="ATTACKER:" style="-fx-background-radius: 32px;" visibleRowCount="100" />
+      <ImageView fx:id="imgWcLogo" fitHeight="112.0" fitWidth="125.0" layoutX="884.0" layoutY="557.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Downloads/wclogotransp.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lbUserName" layoutX="232.0" layoutY="519.0" prefHeight="37.0" prefWidth="73.0" text="Name:" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="231.0" layoutY="562.0" prefHeight="41.0" prefWidth="73.0" text="Points:" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbPointsUser" layoutX="290.0" layoutY="562.0" prefHeight="37.0" prefWidth="63.0" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="232.0" layoutY="276.0" text="RATING:" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="465.0" layoutY="279.0" text="RATING:" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbUserPlayerRating" layoutX="330.0" layoutY="268.0" prefHeight="37.0" prefWidth="83.0" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="24.0" />
+         </font></Label>
+      <Label fx:id="lbPcPlayerRating" layoutX="456.0" layoutY="278.0" textFill="WHITE" />
+      <Button fx:id="btnReset" layoutX="884.0" layoutY="220.0" mnemonicParsing="false" onAction="#btnReset_OnAction" prefHeight="28.0" prefWidth="112.0" style="-fx-background-color: #ffffff; -fx-background-radius: 32px;" text="REPLAY" textFill="#56042c">
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnQuit" layoutX="884.0" layoutY="265.0" mnemonicParsing="false" onAction="#btnQuit_OnAction" prefHeight="28.0" prefWidth="112.0" style="-fx-background-color: #ffffff; -fx-background-radius: 32px;" text="QUIT" textFill="#56042c">
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnReplay" layoutX="884.0" layoutY="314.0" mnemonicParsing="false" onAction="#btnReplayMove_onAction" prefHeight="28.0" prefWidth="112.0" style="-fx-background-color: #ffffff; -fx-background-radius: 32px;" text="XML" textFill="#56042c">
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="lbPCPlayerRating" layoutX="538.0" layoutY="268.0" prefHeight="37.0" prefWidth="83.0" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="24.0" />
+         </font></Label>
+      
+      <Label layoutX="462.0" layoutY="562.0" text="Points:" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbUserName1" layoutX="465.0" layoutY="521.0" prefHeight="38.0" prefWidth="63.0" text="Name:" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbUserNamePC" layoutX="521.0" layoutY="522.0" prefHeight="37.0" prefWidth="136.0" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="lbPointsPC" layoutX="533.0" layoutY="562.0" prefHeight="37.0" prefWidth="63.0" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="lbFirstNamePlayerUser" layoutX="232.0" layoutY="247.0" prefHeight="37.0" prefWidth="120.0" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbFirstNamePlayerPC" layoutX="473.0" layoutY="247.0" prefHeight="37.0" prefWidth="120.0" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnFirstPlayerOnTable" layoutX="234.0" layoutY="73.0" mnemonicParsing="false" prefHeight="161.0" prefWidth="120.0" styleClass="btnOnTable" stylesheets="@../style/main.css" />
+      <Button fx:id="btnSecondPlayerOnTable" layoutX="469.0" layoutY="73.0" mnemonicParsing="false" prefHeight="161.0" prefWidth="120.0" styleClass="btnOnTable" stylesheets="@../style/main.css" />
+      <TextField fx:id="tfGkPC" disable="true" layoutX="678.0" layoutY="88.0" prefHeight="25.0" prefWidth="146.0" promptText="Goalkeeper:" />
+      <TextField fx:id="tfDefender1PC" disable="true" layoutX="678.0" layoutY="126.0" prefHeight="25.0" prefWidth="146.0" promptText="Defender:" />
+      <TextField fx:id="tfDefender3PC" disable="true" layoutX="677.0" layoutY="198.0" prefHeight="25.0" prefWidth="146.0" promptText="Defender:" />
+      <TextField fx:id="tfDefender2PC" disable="true" layoutX="678.0" layoutY="162.0" prefHeight="25.0" prefWidth="146.0" promptText="Defender:" />
+      <TextField fx:id="tfMidfielder2PC" disable="true" layoutX="676.0" layoutY="307.0" prefHeight="25.0" prefWidth="146.0" promptText="Midfielder:" />
+      <TextField fx:id="tfMidfielder3PC" disable="true" layoutX="678.0" layoutY="338.0" prefHeight="25.0" prefWidth="146.0" promptText="Midfielder:" />
+      <TextField fx:id="tfMidfielder1PC" disable="true" layoutX="676.0" layoutY="271.0" prefHeight="25.0" prefWidth="146.0" promptText="Midfielder:" />
+      <TextField fx:id="tfDefender4PC" disable="true" layoutX="678.0" layoutY="233.0" prefHeight="25.0" prefWidth="146.0" promptText="Defender:" />
+      <TextField fx:id="tfAttacker1PC" disable="true" layoutX="678.0" layoutY="371.0" prefHeight="25.0" prefWidth="146.0" promptText="Attacker:" />
+      <TextField fx:id="tfAttacker2PC" disable="true" layoutX="678.0" layoutY="408.0" prefHeight="25.0" prefWidth="146.0" promptText="Attacker:" />
+      <TextField fx:id="tfAttacker3PC" disable="true" layoutX="676.0" layoutY="447.0" prefHeight="25.0" prefWidth="146.0" promptText="Attacker:" />
+      <Label layoutX="391.0" layoutY="130.0" text="VS" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="258.0" layoutY="379.0" text="WINNER OF THIS ROUND:" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbRoundWinner" layoutX="434.0" layoutY="357.0" prefHeight="79.0" prefWidth="235.0" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="32.0" />
+         </font>
+      </Label>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

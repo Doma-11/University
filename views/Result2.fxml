@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #56042C; -fx-background-radius: 32px;; -fx-border-radius: 32px;;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.algebra.controllers.ResultController">
+   <children>
+      <Label layoutX="303.0" layoutY="56.0" prefHeight="43.0" prefWidth="141.0" text="QUIZ SCORE :" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbScore" layoutX="208.0" layoutY="164.0" prefHeight="173.0" prefWidth="226.0" style="-fx-background-color: #ffffff; -fx-border-radius: 16px; -fx-background-radius: 16px;;" text="           8 / 10" textFill="#56042c">
+         <font>
+            <Font name="Bell MT Bold" size="27.0" />
+         </font>
+      </Label>
+      <ProgressIndicator fx:id="correctProgress" layoutX="499.0" layoutY="160.0" prefHeight="182.0" prefWidth="226.0" progress="0.8" style="-fx-progress-color: #56042C; -fx-background-color: #ffffff; -fx-border-radius: 16px;; -fx-background-radius: 16px;;" />
+      
+      
+      <Label fx:id="lbTotalGameResult" layoutX="200.0" layoutY="415.0" prefHeight="97.0" prefWidth="525.0" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="20.0" />
+         </font></Label>
+      <Button fx:id="btnMenuResult" layoutX="756.0" layoutY="630.0" mnemonicParsing="false" onAction="#btnMenuResult_OnAction" text="MENU" />
+      
+   </children>
+</AnchorPane>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="800.0" style="-fx-background-color: #56042C;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.algebra.controllers.TeamMultiplayerController">
+   <children>
+      <Label layoutX="206.0" layoutY="28.0" prefHeight="45.0" prefWidth="270.0" text="2022 WORLD CUP GAME" textFill="#e1bd08">
+         <font>
+            <Font name="Bell MT Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbUserName" layoutX="32.0" layoutY="586.0" prefHeight="37.0" prefWidth="53.0" text="Name:" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbUserName1" layoutX="85.0" layoutY="586.0" prefHeight="37.0" prefWidth="129.0" textFill="WHITE" />
+      <Label layoutX="31.0" layoutY="623.0" prefHeight="21.0" prefWidth="53.0" text="Points:" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbPointsUser" layoutX="85.0" layoutY="615.0" prefHeight="37.0" prefWidth="129.0" textFill="WHITE" />
+      <ComboBox fx:id="cbGk" layoutX="17.0" layoutY="126.0" onAction="#comboBoxSelectAction" prefHeight="25.0" prefWidth="136.0" promptText="GOALKEEPER:" style="-fx-background-radius: 32px;" visibleRowCount="50" />
+      <ComboBox fx:id="cbDefender1" layoutX="17.0" layoutY="158.0" onAction="#comboBoxSelectAction" prefHeight="25.0" prefWidth="136.0" promptText="DEFENDER:" style="-fx-background-radius: 32px;;" visibleRowCount="100" />
+      <ComboBox fx:id="cbDefender2" layoutX="17.0" layoutY="189.0" onAction="#comboBoxSelectAction" prefHeight="25.0" prefWidth="136.0" promptText="DEFENDER:" style="-fx-background-radius: 32px;" visibleRowCount="100" />
+      <ComboBox fx:id="cbDefender3" layoutX="17.0" layoutY="223.0" onAction="#comboBoxSelectAction" prefHeight="25.0" prefWidth="136.0" promptText="DEFENDER:" style="-fx-background-radius: 32px;" visibleRowCount="100" />
+      <ComboBox fx:id="cbDefender4" layoutX="17.0" layoutY="260.0" onAction="#comboBoxSelectAction" prefHeight="25.0" prefWidth="136.0" promptText="DEFENDER:" style="-fx-background-radius: 32px;" visibleRowCount="100" />
+      <ComboBox fx:id="cbMidfielder1" layoutX="17.0" layoutY="292.0" onAction="#comboBoxSelectAction" prefHeight="25.0" prefWidth="136.0" promptText="MIDFIELDER:" style="-fx-background-radius: 32px;" visibleRowCount="100" />
+      <ComboBox fx:id="cbMidfielder2" layoutX="17.0" layoutY="328.0" onAction="#comboBoxSelectAction" prefHeight="25.0" prefWidth="136.0" promptText="MIDFIELDER:" style="-fx-background-radius: 32px;" visibleRowCount="100" />
+      <ComboBox fx:id="cbMidfielder3" layoutX="17.0" layoutY="361.0" onAction="#comboBoxSelectAction" prefHeight="25.0" prefWidth="136.0" promptText="MIDFIELDER:" style="-fx-background-radius: 32px;" visibleRowCount="100" />
+      <ComboBox fx:id="cbAttacker1" layoutX="17.0" layoutY="396.0" onAction="#comboBoxSelectAction" prefHeight="25.0" prefWidth="136.0" promptText="ATTACKER:" style="-fx-background-radius: 32px;" visibleRowCount="100" />
+      <ComboBox fx:id="cbAttacker2" layoutX="17.0" layoutY="430.0" onAction="#comboBoxSelectAction" prefHeight="25.0" prefWidth="136.0" promptText="ATTACKER:" style="-fx-background-radius: 32px;" visibleRowCount="100" />
+      <ComboBox fx:id="cbAttacker3" layoutX="17.0" layoutY="465.0" onAction="#comboBoxSelectAction" prefHeight="25.0" prefWidth="136.0" promptText="ATTACKER:" style="-fx-background-radius: 32px;" visibleRowCount="100" />
+      <Label fx:id="lbLastNamePlayerPC" layoutX="584.0" layoutY="570.0" prefHeight="37.0" prefWidth="101.0" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbUserPlayerRating" layoutX="367.0" layoutY="158.0" prefHeight="28.0" prefWidth="94.0" textFill="WHITE" />
+      <ScrollPane fx:id="spMessageContainer" layoutX="499.0" layoutY="69.0" prefHeight="399.0" prefWidth="260.0">
+         <content>
+            <VBox fx:id="VbMessages" prefHeight="357.0" prefWidth="205.0" />
+         </content>
+      </ScrollPane>
+      <Label layoutX="609.0" layoutY="25.0" styleClass="points" text="Chat" textFill="#e1bd08">
+         <font>
+            <Font name="Bell MT Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnSendMessage" layoutX="573.0" layoutY="509.0" mnemonicParsing="false" onAction="#btnSendMessage_OnAction" prefHeight="28.0" prefWidth="112.0" style="-fx-background-color: #ffffff; -fx-background-radius: 32px;" text="SEND" textFill="#56042c">
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font>
+      </Button>
+      <TextField fx:id="tfMessage" layoutX="499.0" layoutY="478.0" onKeyReleased="#tfMessage_OnKeyReleased" prefHeight="25.0" prefWidth="260.0" promptText="Insert message" />
+      <Button fx:id="btnQuit" layoutX="341.0" layoutY="601.0" mnemonicParsing="false" onAction="#btnQuit_OnAction" prefHeight="28.0" prefWidth="112.0" style="-fx-background-color: #ffffff; -fx-background-radius: 32px;" text="QUIT" textFill="#56042c">
+         <font>
+            <Font name="Bell MT Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnFirstPlayerOnTable" layoutX="238.0" layoutY="86.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="118.0" styleClass="btnOnTable" stylesheets="@../style/main.css" />
+      <Label layoutX="374.0" layoutY="132.0" text="RATING:" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbFirstNamePlayerUser" layoutX="371.0" layoutY="86.0" prefHeight="37.0" prefWidth="112.0" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="287.0" layoutY="249.0" text="VS" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnSecondPlayerOnTable" layoutX="238.0" layoutY="293.0" mnemonicParsing="false" prefHeight="161.0" prefWidth="120.0" styleClass="btnOnTable" stylesheets="@../style/main.css" />
+      <Label layoutX="374.0" layoutY="346.0" text="RATING:" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbFirstNamePlayerPC" layoutX="367.0" layoutY="299.0" prefHeight="37.0" prefWidth="120.0" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbPCPlayerRating" layoutX="374.0" layoutY="368.0" prefHeight="37.0" prefWidth="83.0" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="85.0" layoutY="551.0" text="WINNER OF THIS ROUND:" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbRoundWinner" layoutX="241.0" layoutY="526.0" prefHeight="62.0" prefWidth="236.0" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="32.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
